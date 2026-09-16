@@ -1,6 +1,8 @@
 # Portfolio White
 
-Vo Van Khanh’s standalone portfolio in white and blue (`#1268d5`).
+Vo Van Khanh’s portfolio with two themes in one shared page: white and blue (`#1268d5`) in light mode, and the original blue gradient design in dark mode.
+
+The navigation includes a keyboard-accessible theme button. First visits follow the device color preference; a manual selection is remembered in local storage. The chosen theme is applied before the page renders. Theme switching does not reset project filters, expanded details, or the SEO workflow.
 
 This version preserves the approved content, typing effect, section and project animations, company logo carousel, project filters, and automatic SEO workflow tour.
 
@@ -26,4 +28,4 @@ This is a static site. Serve the repository root; no build command or dependency
 
 ## Editing
 
-The page template is JSON encoded inside the `script[type="__bundler/template"]` element in `index.html`. Decode it before editing, then encode it back. The light theme is included in that template. Assets use relative paths, so this repository runs independently of the original portfolio.
+The page template is JSON encoded inside the `script[type="__bundler/template"]` element in `index.html`. Decode it before editing, then encode it back. Theme colors use CSS custom properties on `:root` and `:root[data-theme="dark"]`, with scoped light-theme refinements. Assets use relative paths, so this repository runs independently of the original portfolio.
